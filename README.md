@@ -31,3 +31,21 @@ reduce the input image to a thumbnail based on the given scaling factor [1-8].
 tile thumbnails of the input image based on the given scaling factor [1-8]. 
 -o: 
 write output image to the specified file. Existent output files will be overwritten. 
+
+## Errors
+ppmcvt should print to the standard error output stream exactly the specified line and then 
+exit under the following circumstances: 
+ 
+"Usage: ppmcvt [-bgirsmtno] [FILE]\n": malformed command line 
+ 
+"Error: Invalid channel specification: (%s); should be 'red', 'green' or 'blue'\n” 
+ 
+"Error: Invalid max grayscale pixel value: %s; must be less than 65,536\n" 
+ 
+"Error: Invalid scale factor: %d; must be 1-8\n" 
+ 
+"Error: No input file specified\n" 
+ 
+"Error: No output file specified\n" 
+ 
+"Error: Multiple transformations specified\n" 
